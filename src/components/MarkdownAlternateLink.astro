@@ -1,0 +1,34 @@
+---
+/**
+ * Add a <link rel="alternate" type="text/markdown"> tag to your <head>
+ * for markdown auto-discovery by AI agents and crawlers.
+ *
+ * Usage:
+ *   <head>
+ *     <MarkdownAlternateLink />
+ *   </head>
+ *
+ * Props:
+ *   patterns - URL path prefixes to match (defaults to all paths)
+ *             e.g. ["/post/", "/blog/"]
+ */
+interface Props {
+  patterns?: string[];
+}
+
+const { patterns } = Astro.props;
+const pathname = Astro.url.pathname;
+
+// Check if the current page matches any of the configured patterns
+const shouldRender =
+  !patterns || patterns.some((p) => pathname.startsWith(p));
+
+// Generate the .md URL by stripping trailing slash and appending .md
+const mdHref = shouldRender
+  ? pathname.replace(/\/$/, "") + ".md"
+  : null;
+---
+
+{mdHref && (
+  <link rel="alternate" type="text/markdown" href={mdHref} />
+)}

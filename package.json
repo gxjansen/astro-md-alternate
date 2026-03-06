@@ -1,0 +1,36 @@
+{
+  "name": "astro-md-alternate",
+  "version": "0.1.0",
+  "description": "Serve markdown versions of your Astro content pages for AI agents and LLMs. Adds .md endpoints and <link rel=\"alternate\"> auto-discovery.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "astro-integration",
+    "withastro",
+    "seo",
+    "ai",
+    "llm",
+    "markdown",
+    "content-negotiation",
+    "third-audience"
+  ],
+  "homepage": "https://github.com/gxjansen/astro-md-alternate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gxjansen/astro-md-alternate"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./components": "./src/components/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "astro": "^5.18.0",
+    "typescript": "^5.8.0"
+  }
+}

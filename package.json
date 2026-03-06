@@ -17,7 +17,7 @@
   "homepage": "https://github.com/gxjansen/astro-md-alternate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gxjansen/astro-md-alternate"
+    "url": "git+https://github.com/gxjansen/astro-md-alternate.git"
   },
   "exports": {
     ".": "./src/index.ts",
